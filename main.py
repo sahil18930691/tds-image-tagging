@@ -7,7 +7,12 @@ app = FastAPI()
 predictor_config_path = "config.yaml"
 
 predictor = ImagePredictor.init_from_config_url(predictor_config_path)
+@app.get('/')
 
+def index():
+    """Sample Function"""
+    print(index.__doc__)
+    return({'key' : 'value'})
 
 @app.post("/scorefile/")
 def create_upload_file(file: UploadFile = File(...)):
