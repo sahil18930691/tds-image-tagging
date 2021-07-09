@@ -1,0 +1,12 @@
+opencv-python
+numpy
+tensorflow-cpu
+pandas
+fastapi
+PyYAML
+uvicorn
+python-multipart
+
+
+
+
