@@ -1,12 +1,16 @@
 import cv2
 import numpy as np
+from urllib.request import Request, urlopen
 
 
 def read_img_from_path(path):
     """Function To Read Image File From Path"""
-    img = cv2.imread(path, cv2.IMREAD_COLOR)
+    #img = cv2.imread(path, cv2.IMREAD_COLOR)
+    req = Request(path, headers={'User-Agent': 'Mozilla/5.0'})
+    resp = urlopen(req).read()
+    img = np.asarray(bytearray(resp), dtype="uint8")
+    img = cv2.imdecode(img, cv2.IMREAD_COLOR)
     return img
-
 
 def read_from_file(file_object):
     """Function To Red Image Through Uploaded File"""

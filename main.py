@@ -1,5 +1,4 @@
 from fastapi import FastAPI, File, UploadFile
-
 from image_tag.predictor import ImagePredictor
 
 app = FastAPI()
@@ -19,3 +18,10 @@ def create_upload_file(file: UploadFile = File(...)):
     '''This Function is for uploading the file from your device, on which you want to predict'''
     print(create_upload_file.__doc__)
     return predictor.predict_from_file(file.file)
+
+
+
+@app.get("/imageThroughURL")
+def image_through_url(URL: str):
+    path=URL
+    return predictor.predict_from_path(path)
