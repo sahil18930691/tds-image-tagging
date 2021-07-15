@@ -23,5 +23,6 @@ def create_upload_file(file: UploadFile = File(...)):
 
 @app.get("/imageThroughURL")
 def image_through_url(URL: str):
+    '''To Upload Files Through URL'''
     path=URL
     return predictor.predict_from_path(path)
