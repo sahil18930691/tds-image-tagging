@@ -1,7 +1,9 @@
 from fastapi import FastAPI, File, UploadFile
 from image_tag.predictor import ImagePredictor
 
-app = FastAPI()
+app = FastAPI(
+    title="Image Classification"
+    description="classify images into different categories")
 
 predictor_config_path = "config.yaml"
 
