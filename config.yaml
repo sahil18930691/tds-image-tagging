@@ -1,5 +1,5 @@
 resize_shape: [224, 224]
 targets: ['balcony', 'Bathroom', 'Bedroom', 'Dining Room', 'Exterior', 'Gym & Sports', 'Kitchen', 'Living Room', 'Empty_Room', 'Stairs', 'Study Room','Swimming pool','Utility Room']
-model_path: "keras_model.h5"
+model_path: "keras_model2.h5"
 model_url: "https://drive.google.com/file/d/1SdObGgefo2N3NYO4cBHruCSoe0PzObx3/view?usp=sharing"
 model_sha256: "b890ac6a7e3a56f3aca4c4a9cdf291b0500c3ec2fe40686456da97f13f61fff2"
