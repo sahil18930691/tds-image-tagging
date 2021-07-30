@@ -39,8 +39,8 @@ def create_upload_file(file: UploadFile = File(...)):
 
 
 
-@app.get("/image_url")
-def image_through_url(URL: str):
+@app.get("/predict_image")
+def image_through_url(image_url: str):
     '''To Upload Files Through URL'''
-    path=URL
+    path=image_url
     return predictor.predict_from_path(path)
