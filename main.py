@@ -39,7 +39,7 @@ def create_upload_file(file: UploadFile = File(...)):
 
 
 
-@app.get("/url")
+@app.get("/image_url")
 def image_through_url(URL: str):
     '''To Upload Files Through URL'''
     path=URL
